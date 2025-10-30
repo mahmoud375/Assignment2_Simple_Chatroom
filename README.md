@@ -1,10 +1,12 @@
-#  Go RPC Chat Application
+# Go RPC Chat Application
+
+**[Watch the Video Demo (Google Drive)](https://drive.google.com/file/d/15D6090AjTCR2pK33gJGZk-rvTdBKr7R1/view?usp=drive_link)**
 
 A simple client-server chatroom application built with Go (Golang) and the `net/rpc` package. This project demonstrates the fundamentals of RPC, concurrent server handling, and state management using mutexes.
 
 This was built as an assignment based on the requirements in `instructions.md`.
 
-##  Features
+## Features
 
 * **Client-Server Architecture:** Uses Go's `net/rpc` library.
 * **Persistent Chat History:** The server maintains a complete history of all messages.
@@ -12,7 +14,7 @@ This was built as an assignment based on the requirements in `instructions.md`.
 * **Concurrency Safe:** The chat history is protected by a `sync.Mutex` to prevent race conditions.
 * **Graceful Exit:** Clients can type `exit` to leave the chat.
 
-##  Technologies Used
+## Technologies Used
 
 * **Go (Golang)**
 * **Standard Libraries:**
@@ -28,7 +30,7 @@ Here is a screenshot of the server and two clients running concurrently:
 
 ![Project Demo Screenshot](demo.png)
 
-##  How to Run the Project
+## How to Run the Project
 
 You will need to open 2 or more terminal windows.
 
