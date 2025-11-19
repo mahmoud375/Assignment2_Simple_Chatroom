@@ -1,3 +1,9 @@
+# Docker Hub Image
+
+**🔗 [Click here to view on Docker Hub: elgendy2003/rpc-chat](https://hub.docker.com/r/elgendy2003/rpc-chat)**
+
+-----
+
 # Go RPC Chat Application
 
 **[Watch the Video Demo (Google Drive)](https://drive.google.com/file/d/15D6090AjTCR2pK33gJGZk-rvTdBKr7R1/view?usp=drive_link)**
@@ -26,82 +32,13 @@ This was built as an assignment based on the requirements in `instructions.md`.
 
 ## Docker
 
-**Docker Hub Image:** [mahmoud375/chatroom-server](https://hub.docker.com/r/mahmoud375/chatroom-server)
+**Docker Hub Image:** [elgendy2003/rpc-chat](https://hub.docker.com/r/elgendy2003/rpc-chat)
 
 ### Running with Docker
 
 The easiest way to run the server is using the pre-built Docker image:
 
 ```bash
-docker pull mahmoud375/chatroom-server:latest
-docker run -p 1234:1234 mahmoud375/chatroom-server:latest
-```
-
-Then in another terminal, run the client locally:
-
-```bash
-go run client.go
-```
-
-### Building Docker Image Locally
-
-If you want to build the Docker image yourself:
-
-```bash
-docker build -t chatroom-server .
-docker run -p 1234:1234 chatroom-server
-```
-
-## DEMO
-
-Here is a screenshot of the server and two clients running concurrently:
-
-![Project Demo Screenshot](demo.png)
-
-## How to Run the Project
-
-You will need to open 2 or more terminal windows.
-
-### 1. Run the Server
-
-In your first terminal, start the server:
-
-```bash
-go run server.go
-```
-
-**Output:**
-```
-2025/10/30 21:00:00 Chat server running on port 1234...
-```
-
-### 2. Run the Client(s)
-
-In a second terminal, run the client:
-
-```bash
-go run client.go
-```
-
-You will be prompted for your name. You can open a third, fourth, etc., terminal and run `go run client.go` again to have multiple users join the chat.
-
-**Client 1 Output:**
-```
-Enter your name: mahmoud
-Welcome, mahmoud! You can start chatting.
-Enter message (or 'exit' to quit): hi
---- Chat History ---
-mahmoud: hi
-Enter message (or 'exit' to quit): 
-```
-
-**Client 2 Output:**
-```
-Enter your name: elgendy
-Welcome, elgendy! You can start chatting.
-Enter message (or 'exit' to quit): hello
---- Chat History ---
-mahmoud: hi
-elgendy: hello
-Enter message (or 'exit' to quit): 
+docker pull elgendy2003/rpc-chat:v1
+docker run -p 1234:1234 elgendy2003/rpc-chat:v1
 ```
