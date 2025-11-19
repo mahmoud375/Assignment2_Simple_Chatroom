@@ -24,6 +24,34 @@ This was built as an assignment based on the requirements in `instructions.md`.
     * `log` (for server-side logging)
     * `bufio` (for reading full-line client input)
 
+## Docker
+
+**Docker Hub Image:** [mahmoud375/chatroom-server](https://hub.docker.com/r/mahmoud375/chatroom-server)
+
+### Running with Docker
+
+The easiest way to run the server is using the pre-built Docker image:
+
+```bash
+docker pull mahmoud375/chatroom-server:latest
+docker run -p 1234:1234 mahmoud375/chatroom-server:latest
+```
+
+Then in another terminal, run the client locally:
+
+```bash
+go run client.go
+```
+
+### Building Docker Image Locally
+
+If you want to build the Docker image yourself:
+
+```bash
+docker build -t chatroom-server .
+docker run -p 1234:1234 chatroom-server
+```
+
 ## DEMO
 
 Here is a screenshot of the server and two clients running concurrently:
